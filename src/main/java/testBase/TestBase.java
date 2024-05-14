@@ -12,6 +12,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.AddUserPageObjects;
+import pageObjects.LessonsPageObjects;
 import pageObjects.LoginPageObjects;
 import pageObjects.RegistrationPageObject;
 //import pageObjects.HomePageObjects;
@@ -33,8 +34,8 @@ public class TestBase {
 	public LoginPageObjects loginpage;
 	public RegistrationPageObject registrationpageobject;
 	public AddUserPageObjects adduserpageobjects;
-
-	public void LaunchBrowserAndNavigate() throws Exception {
+public LessonsPageObjects lessonpageobjects;
+public void LaunchBrowserAndNavigate() throws Exception {
 
 		// read prop file and get browser and url
 		String browser = PropertiesOperations.getPropertyValueByKey("browser");
@@ -67,6 +68,7 @@ public class TestBase {
 		loginpage=new LoginPageObjects();
 		registrationpageobject=new RegistrationPageObject();
 		adduserpageobjects=new AddUserPageObjects();
+		lessonpageobjects = new LessonsPageObjects();
 	}
 
 	@AfterMethod

@@ -25,6 +25,8 @@ public class LoginPageObjects extends TestBase {
 	
 	@FindBy(xpath = "//div[contains(text(),'You have successfully LoggedIn')]") WebElement successMsg;
 
+	@FindBy(xpath = "//button[text()='Ok Got it!!!']")
+	WebElement cookiesButton;
 	// constructor - to use initElement method
 	public LoginPageObjects() {
 		PageFactory.initElements(driver, this);
@@ -32,7 +34,10 @@ public class LoginPageObjects extends TestBase {
 
 	public boolean login() throws Exception {
 		System.out.println(driver);
+
+        CommonMethods.click(cookiesButton);
 		login.click();
+		
 		CommonMethods.sendKeysToElement(username, PropertiesOperations.getPropertyValueByKey("username"));
 		CommonMethods.sendKeysToElement(password, PropertiesOperations.getPropertyValueByKey("password"));
 		Login.click();

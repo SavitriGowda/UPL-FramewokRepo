@@ -6,10 +6,10 @@
 	</listeners>
 	<test name="Test">
 		<classes>
-			<!--<class name="testPages.LoginPage_Tests" />
-			<class name="testPages.AddUserPage_Test" />
+			<  class name="testPages.LoginPage_Tests" />
+			<!--  class name="testPages.AddUserPage_Test" />
 			<class name="pageObjects.AddUserPageObjects" />-->
-			<class name="testPages.RegistrationPage_Test" />
+			<!--  class name="testPages.RegistrationPage_Test" />-->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
